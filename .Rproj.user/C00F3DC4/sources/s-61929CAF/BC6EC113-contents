@@ -1,8 +1,0 @@
-derf <- function(n, dist = "norm", ...) {
-  mc <- match.call(expand.dots = FALSE)
-  x <- mc$...
-  name <- x |> names()
-  values <- x |> unlist()
-  args <- mapply(paste0, ",", name, "=", values) |> paste(collapse = "")
-  parse(text = paste0("d", dist, "(", n, args, ")")) |> eval()
-}
