@@ -3,7 +3,7 @@ testin <- function(dist){
     stop('Only one distribution per time')
   }
   vetor <- read.table(text = list.files("R",include.dirs= FALSE, full.names=TRUE)) |> unlist()
-  vetor <- gsub("(R/erf_d)|(.R)", '', vetor)
+  vetor <- gsub("(R/d)|(.R)", '', vetor)
   dist %in% vetor
 }
 
