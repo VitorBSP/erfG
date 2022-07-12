@@ -1,4 +1,4 @@
-dnorm <- function(x, mu, sigma){
+dnorm <- function(x, mu = 0 , sigma = 1){
   if(is.numeric(c(x, mu, sigma))==FALSE){
     stop('All of the arguments must be numeric')
   }

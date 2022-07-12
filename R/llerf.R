@@ -1,4 +1,4 @@
-#' perf
+#' log_lerf
 #'
 #' This function applies erf to density of the model that you choose.
 #'
@@ -10,11 +10,11 @@
 #'
 #'
 #' @examples
-#' perf(2, dist = "exp", alpha = 3)
+#' derf(2, dist = "egep", xi = 3, a = 3, b = 3)
 #'
 #'
-#' perf(2, dist = "norm")
-#'@export
-perf <- function(x, dist, ...) {
-  erf(type = "p", x, dist, ...)
+#' derf(2, dist = "betagp", xi = 3, sigma = 1, beta1 = 3, alpha = 2)
+#'
+log_lerf <- function(x, dist, ...) {
+  sum(log(erf(type = "d", x, dist, ...)))
 }

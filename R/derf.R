@@ -15,6 +15,8 @@
 #'
 #' derf(2, dist = "betagp", xi = 3, sigma = 1, beta1 = 3, alpha = 2)
 #'
+#'@export
+
 derf <- function(x, dist, ...) {
    erf(type = "d", x, dist, ...)
   }
