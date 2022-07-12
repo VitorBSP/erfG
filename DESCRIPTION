@@ -3,9 +3,15 @@ Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
 Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Maintainer: Thiago A. N. De Andrade <thiagoan.andrade@gmail.com>
+Description: In a recent paper, Zea and Andrade (2021) proposed a new generator
+  of distributions called the erf-$G$ family. Their proposal provides special 
+  distributions without adding complexity to parametric spaces of resulting 
+  models. Empirical evidences shows that the proposed family may solve issues of 
+  flat or quasi-red likelihoods in some baselines.Due to great applied potential
+  of the new model, this package provides a computional implementatio of the
+  erf-$G$ family. The density, distribution and  quantile functions,  besides 
+  functions to generates the erf-$G$ random variables are implemented. 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
@@ -14,3 +20,7 @@ Suggests:
     extraDistr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Depends: 
+    R (>= 2.10)
+Imports: 
+    rlang
