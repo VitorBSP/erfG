@@ -16,5 +16,5 @@
 #' perf(2, dist = "norm")
 #'@export
 perf <- function(x, dist, ...) {
-  erf(type = "p", x, dist, ...)
+  sapply(x, erf, type = 'p', dist, ...)
 }

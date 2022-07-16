@@ -18,7 +18,7 @@
 #'@export
 
 derf <- function(x, dist, ...) {
-   erf(type = "d", x, dist, ...)
+  sapply(x, erf, type = 'd', dist, ...)
   }
 
 

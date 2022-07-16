@@ -16,5 +16,5 @@
 #' derf(2, dist = "betagp", xi = 3, sigma = 1, beta1 = 3, alpha = 2)
 #'
 log_lerf <- function(x, dist, ...) {
-  sum(log(erf(type = "d", x, dist, ...)))
+  sum(log(derf(x, dist, ...)))
 }
