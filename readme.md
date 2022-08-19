@@ -21,5 +21,5 @@ distributions without adding complexity to parametric spaces of resulting models
 Empirical evidences shows that the proposed family may solve issues of flat or 
 quasi-red likelihoods in some baselines.Due to great applied potential of the 
 new model, this package provides a computational implementation of the erf-$G$ 
-family. The density, distribution ande quantile functions,  besides functions to
+family. The density, distribution and quantile functions,  besides functions to
 generates the erf-$G$  random variables are implemented. 
