@@ -15,7 +15,7 @@ devtools::install_github("https://github.com/AlissonRP/erfG")
 ## Project
 
 Project developed in the course of Statistics-UFSM for the conclusion of the 
-course. Based in a arecent paper, Zea and Andrade (2021) proposed a new generator
+course. Based in a recent paper, Zea and Andrade (2021) proposed a new generator
 of distributions called the erf-$G$ family. Their proposal provides special 
 distributions without adding complexity to parametric spaces of resulting models.
 Empirical evidences shows that the proposed family may solve issues of flat or 
