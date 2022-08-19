@@ -3,18 +3,28 @@
 #' This function applies erf to density of the model that you choose.
 #'
 #'
-#' @param x     Value to calculate the density.
+#' @param x Values to calculate the likelihood.
 #'
 #' @param dist     Distribution that you want to use.
-#' @param ...     Specific arguments of your model.
+#' @param param    Vector of parameters in the distribution (adequate to optim()).
 #'
 #'
 #' @examples
-#' derf(2, dist = "egep", xi = 3, a = 3, b = 3)
 #'
+#' If you want to calculate log likelihood of erf-Weibull:
+#' x <- c(0, rlnorm(50))
+#' log_lerf(x, dist = 'weibull', param = c(alpha = 1, gamma = pi))
 #'
-#' derf(2, dist = "betagp", xi = 3, sigma = 1, beta1 = 3, alpha = 2)
+#' If you want to calculate log likelihood of erf-Normal:
+#' x <- rnorm(100)
+#' log_lerf(x, dist = 'weibull', param = c(mu = 0, sigma = 1))
 #'
-log_lerf <- function(x, dist, ...) {
-  sum(log(derf(x, dist, ...)))
+#' @export
+log_lerf <- function(x, dist, param) {
+  param = param
+  call = parse(text=paste0('d', dist,'(x' , ',',
+                           paste0(collapse = ',', param),')',
+                           collapse = ''))
+  fn = function(x) eval(call)
+  return(sum(log(sapply(x, fn))))
 }
